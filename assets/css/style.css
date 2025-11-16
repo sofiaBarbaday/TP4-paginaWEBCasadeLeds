@@ -153,4 +153,22 @@ footer {
   padding: 1rem var(--gap); 
   color: var(--muted); }
 
-  /* agrego estilo de formulario e info de contacto*/
+  /* agrego estilo de formulario e info de contacto */
+
+  /* Sección principal de contacto */
+.contacto-page {
+  max-width: var(--max);
+  margin: 2rem auto;
+  text-align: center;
+  padding: 0 var(--gap);
+}
+
+.contacto-page .titulo-pagina {
+  font-size: 2rem;
+  margin-bottom: .5rem;
+}
+
+.contacto-page .subtitulo {
+  color: var(--muted);
+  font-size: 1rem;
+}
