@@ -208,3 +208,25 @@ footer {
   color: #fff;
   resize: none;
 }
+
+
+/* INFO DE CONTACTO */
+.info-contacto {
+  background: #141416;
+  padding: 1.5rem;
+  border-radius: 12px;
+  color: var(--fg);
+}
+
+.info-contacto p {
+  margin: .5rem 0;
+}
+
+.info-contacto a {
+  color: var(--brand);
+  text-decoration: none;
+}
+
+.info-contacto a:hover {
+  text-decoration: underline;
+}
