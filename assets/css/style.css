@@ -238,3 +238,25 @@ footer {
   }
 }
 
+
+/* modifico el grid de productos para que quede mejor esteticamente */
+.grid-productos {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* 5 columnas fijas en compu */
+@media (min-width: 751px) {
+  .grid-productos {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* 1,2 columnas en celular */
+@media (max-width: 750px) {
+  .grid-productos {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+}
+
