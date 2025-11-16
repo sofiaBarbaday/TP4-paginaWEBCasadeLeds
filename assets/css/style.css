@@ -230,3 +230,11 @@ footer {
 .info-contacto a:hover {
   text-decoration: underline;
 }
+
+/* Ajustes para que no quede todo apretado */
+@media (min-width: 750px) {
+  .formulario-contacto {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
