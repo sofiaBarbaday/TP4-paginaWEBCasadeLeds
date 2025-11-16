@@ -172,3 +172,13 @@ footer {
   color: var(--muted);
   font-size: 1rem;
 }
+
+/* Parte general del formulario-info */
+
+.formulario-contacto {
+  max-width: var(--max);
+  margin: 2rem auto 3rem auto;
+  padding: 0 var(--gap);
+  display: grid;
+  gap: 2rem;
+}
