@@ -1,15 +1,15 @@
 :root {
-  --max: 1100px;
-  --gap: 1rem;
-  --bg: #0f0f10;
-  --fg: #f3f3f3;
-  --muted: #b5b5b5;
-  --brand: #5b8cff;
+  --max: 1100px; /*ancho maximo, secciones*/
+  --gap: 1rem;   /*espacio*/ 
+  --bg: #0f0f10;  /*color de fondo*/
+  --fg: #f3f3f3;  /*color del texto*/
+  --muted: #b5b5b5; 
+  --brand: #5b8cff; /*color principal-botones*/
 }
 
-* { box-sizing: border-box; }
+* { box-sizing: border-box; } /*reset*/
 
-body {
+body { /*fondo y tipografia general*/
   margin: 0;
   font-family: system-ui, Arial, sans-serif;
   background: var(--bg);
@@ -17,7 +17,7 @@ body {
   line-height: 1.6;
 }
 
-.nav {
+.nav { /*barra de navegacion, header*/
   max-width: var(--max);
   margin: 0 auto;
   padding: 1rem var(--gap);
@@ -32,16 +32,16 @@ body {
   color: var(--fg);
   font-size: 1.2rem; }
 
-.menu__link { 
+.menu__link {  /*links del menu*/
   margin-left: 1rem; 
   text-decoration: none; 
   color: var(--muted);
   transition: color 0.2s ease; }
 
-.menu__link.is-active, .menu__link:hover { 
+.menu__link.is-active, .menu__link:hover { /*los hovers y link activos*/
   color: var(--fg); }
 
-.hero {
+.hero { /*portada del index*/
   max-width: var(--max); 
   margin: 2rem auto; 
   padding: 2rem var(--gap);
@@ -51,7 +51,7 @@ body {
    align-items: center;
    justify-content: space-between;
    gap: 2rem;
-   flex-wrap: wrap;
+   flex-wrap: wrap; /*para que quede mejor visualmente en celu*/
 }
 .hero__contenido{
   flex: 1 1 400px;
@@ -60,7 +60,7 @@ body {
   margin-bottom: 1rem;
   font-size: 2rem;
 }
-.hero__img{
+.hero__img{ /*imagen principal del hero*/
   flex: 1 1 350px;
   width: 100%;
   max-width: 420px; /*achico primera imagen*/
@@ -116,13 +116,13 @@ body {
   transform: translateY(-4px);
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
-.card img {
+.card img { /*imagen de cada producto*/
    width: 100%; 
    height: 160px; 
    object-fit: cover; 
    border-radius: 8px; }
 
-.producto__titulo { 
+.producto__titulo {  /*titulo del producto*/
   margin: .5rem 0;
   font-weight: 600; }
 
@@ -184,7 +184,7 @@ footer {
 }
 
 
-/* FORMULARIO  */
+/* FORMULARIO, cuadrito*/
 .form {
   background: #141416;
   padding: 1.5rem;
@@ -210,7 +210,7 @@ footer {
 }
 
 
-/* INFO DE CONTACTO */
+/* INFO DE CONTACTO, recuadro  */
 .info-contacto {
   background: #141416;
   padding: 1.5rem;
