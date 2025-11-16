@@ -99,11 +99,11 @@ body {
     padding: 0 var(--gap);
   }
 
-.grid-productos {
+/* .grid-productos {
   display: grid; 
   gap: var(--gap);
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-}
+} */
 
 .card {
   background: #141416; 
