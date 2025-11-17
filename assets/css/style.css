@@ -294,3 +294,12 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
+/* .oculto y .mostrar, clases para mostrar u ocultar contenido. OPACITY*/
+.oculto {
+    opacity: 0;
+}
+.mostrar {
+    opacity: 1 !important;
+    transition: opacity 0.5s ease;
+}
