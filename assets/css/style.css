@@ -276,3 +276,10 @@ footer {
     transform: scale(1.05);
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
+/*hover en imagenes del catálogo*/
+/*zoom suave para interactividad*/
+.card img:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+}
