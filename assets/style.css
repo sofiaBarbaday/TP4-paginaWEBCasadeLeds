@@ -152,3 +152,315 @@ footer {
   margin: 3rem auto; 
   padding: 1rem var(--gap); 
   color: var(--muted); }
+
+  :root {
+  --max: 1100px; /*ancho maximo, secciones*/
+  --gap: 1rem;   /*espacio*/ 
+  --bg: #0f0f10;  /*color de fondo*/
+  --fg: #f3f3f3;  /*color del texto*/
+  --muted: #b5b5b5; 
+  --brand: #5b8cff; /*color principal-botones*/
+}
+
+* { box-sizing: border-box; } /*reset*/
+
+body { /*fondo y tipografia general*/
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+}
+
+.nav { /*barra de navegacion, header*/
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1rem var(--gap);
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+}
+
+.logo { 
+  font-weight: 700; 
+  text-decoration: none; 
+  color: var(--fg);
+  font-size: 1.2rem; }
+
+.menu__link {  /*links del menu*/
+  margin-left: 1rem; 
+  text-decoration: none; 
+  color: var(--muted);
+  transition: color 0.2s ease; }
+
+.menu__link.is-active, .menu__link:hover { /*los hovers y link activos*/
+  color: var(--fg); }
+
+.hero { /*portada del index*/
+  max-width: var(--max); 
+  margin: 2rem auto; 
+  padding: 2rem var(--gap);
+  background: #141416;
+   border-radius: 12px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 2rem;
+   flex-wrap: wrap; /*para que quede mejor visualmente en celu*/
+}
+.hero__contenido{
+  flex: 1 1 400px;
+}
+.hero__contenido h1{
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.hero__img{ /*imagen principal del hero*/
+  flex: 1 1 350px;
+  width: 100%;
+  max-width: 420px; /*achico primera imagen*/
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+.hero__img:hover{
+  transform: scale(1.03);
+}
+
+/*botones*/
+.btn { 
+  border: 0; 
+  padding: .75rem 1rem; 
+  border-radius: 8px; 
+  cursor: pointer;
+  font-weight: 500; }
+
+.btn--primario { 
+  background: var(--brand); 
+  color: #fff; 
+  text-decoration: none;
+  display: inline-block; }
+
+.btn--secundario { 
+  background: #232327; 
+  color: #fff; 
+  text-decoration: none; 
+  display: inline-block; }
+
+  .destacados{
+    max-width: var(--max);
+    margin: 3rem auto;
+    padding: 0 var(--gap);
+  }
+
+/* .grid-productos {
+  display: grid; 
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+} */
+
+.card {
+  background: #141416; 
+  border-radius: 12px; 
+  overflow: hidden; 
+  padding: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+.card img { /*imagen de cada producto*/
+   width: 100%; 
+   height: 160px; 
+   object-fit: cover; 
+   border-radius: 8px; }
+
+.producto__titulo {  /*titulo del producto*/
+  margin: .5rem 0;
+  font-weight: 600; }
+
+.producto__precio { 
+  color: var(--muted); 
+  font-size: 0.95rem;}
+
+.form, .info{ 
+  max-width: var(--max); 
+  margin: 2rem auto; 
+  padding: 0 var(--gap); }
+
+.campo { 
+  display: grid; 
+  gap: .5rem; 
+  margin-bottom: 1rem; }
+
+input, textarea { 
+  padding: .75rem; 
+  border-radius: 8px; 
+  border: 1px solid #2b2b2f; 
+  background: #19191c; 
+  color: #fff; }
+
+footer { 
+  max-width: var(--max); 
+  margin: 3rem auto; 
+  padding: 1rem var(--gap); 
+  color: var(--muted); }
+
+  /* agrego estilo de formulario e info de contacto */
+
+  /* Sección principal de contacto */
+.contacto-page {
+  max-width: var(--max);
+  margin: 2rem auto;
+  text-align: center;
+  padding: 0 var(--gap);
+}
+
+.contacto-page .titulo-pagina {
+  font-size: 2rem;
+  margin-bottom: .5rem;
+}
+
+.contacto-page .subtitulo {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* Parte general del formulario-info */
+
+.formulario-contacto {
+  max-width: var(--max);
+  margin: 2rem auto 3rem auto;
+  padding: 0 var(--gap);
+  display: grid;
+  gap: 2rem;
+}
+
+
+/* FORMULARIO, cuadrito*/
+.form {
+  background: #141416;
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: grid;
+  gap: 1rem;
+}
+
+.form label {
+  font-weight: 500;
+  font-size: .95rem;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: .75rem;
+  border-radius: 8px;
+  border: 1px solid #2b2b2f;
+  background: #19191c;
+  color: #fff;
+  resize: none;
+}
+
+
+/* INFO DE CONTACTO, recuadro  */
+.info-contacto {
+  background: #141416;
+  padding: 1.5rem;
+  border-radius: 12px;
+  color: var(--fg);
+}
+
+.info-contacto p {
+  margin: .5rem 0;
+}
+
+.info-contacto a {
+  color: var(--brand);
+  text-decoration: none;
+}
+
+.info-contacto a:hover {
+  text-decoration: underline;
+}
+
+/* Ajustes para que no quede todo apretado */
+  @media (min-width: 750px) {
+  .grid-productos {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+
+/* modifico el grid de productos para que quede mejor esteticamente */
+.grid-productos {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* 5 columnas fijas en compu */
+@media (min-width: 751px) {
+  .grid-productos {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* 1,2 columnas en celular */
+@media (max-width: 750px) {
+  .grid-productos {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+}
+
+
+
+/*TP6 efectos visuales, hover, animaciones y clases*/
+.card:hover { /*hover en tarjetas de productos, efecto al pasar el mouse*/
+    transform: translateY(-5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/*hover boton primario, btn--primario*/
+/*opacidad(opacity) y ligera escala mas transicion suave*/
+.btn--primario:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/*hover en imagenes del catálogo*/
+/*zoom suave para interactividad*/
+.card img:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+}
+
+/*CLASES*/
+/*.animar= es para hacer aparecer elementos subiendo*/
+.animar {
+    animation: subir 0.6s ease forwards;
+}
+
+@keyframes subir {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* .oculto y .mostrar, clases para mostrar u ocultar contenido. OPACITY*/
+.oculto {
+    opacity: 0;
+}
+.mostrar {
+    opacity: 1 !important;
+    transition: opacity 0.5s ease;
+}
+
+/* .resaltar hace un efecto de brillo suave (botones, imagenes o avisos)*/
+.resaltar {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transition: box-shadow 0.5s ease;
+}
