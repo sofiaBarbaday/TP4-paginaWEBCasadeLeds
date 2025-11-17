@@ -1,16 +1,14 @@
-/* ================================
-   VARIABLES Y RESET
-================================ */
+/* variables y reset general*/
 :root {
-  --max: 1100px;
-  --gap: 1rem;
-  --bg: #0f0f10;
-  --fg: #f3f3f3;
-  --muted: #b5b5b5;
-  --brand: #5b8cff;
+  --max: 1100px; /*ancho maximo*/
+  --gap: 1rem;   /*separación estandar*/
+  --bg: #0f0f10;  /*color de fondo*/
+  --fg: #f3f3f3;  /*color de texto*/
+  --muted: #b5b5b5; /*color para subtitulos*/
+  --brand: #5b8cff; /*color principal para los botones*/
 }
 
-* { box-sizing: border-box; }
+* { box-sizing: border-box; } /*reset*/
 
 body {
   margin: 0;
@@ -20,9 +18,7 @@ body {
   line-height: 1.6;
 }
 
-/* ================================
-   NAVEGACIÓN
-================================ */
+/*NAVEGACIÓN, header*/
 .nav {
   max-width: var(--max);
   margin: 0 auto;
@@ -43,28 +39,26 @@ body {
   margin-left: 1rem; 
   text-decoration: none; 
   color: var(--muted);
-  transition: color 0.2s ease; 
+  transition: color 0.2s ease; /*suave cambio de color*/
 }
 
 .menu__link.is-active,
 .menu__link:hover { 
-  color: var(--fg); 
+  color: var(--fg);  /*resalta el linkactual o el hover*/
 }
 
-/* ================================
-   HERO (PORTADA INICIO)
-================================ */
+/*PORTADA INICIO, hero*/
 .hero {
   max-width: var(--max);
   margin: 2rem auto;
   padding: 2rem var(--gap);
-  background: #141416;
+  background: #141416; /*recuadro oscuro*/
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /*para mejorar la visual en los celulares*/
 }
 
 .hero__contenido { flex: 1 1 400px; }
@@ -74,23 +68,21 @@ body {
   font-size: 2rem;
 }
 
-.hero__img {
+.hero__img { /*imagen principal*/
   flex: 1 1 350px;
   width: 100%;
   max-width: 420px;
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /*efecto del tP6*/
 }
 
 .hero__img:hover {
-  transform: scale(1.03);
+  transform: scale(1.03); /*zoom suave*/
 }
 
-/* ================================
-   BOTONES
-================================ */
+/* botones generales */
 .btn { 
   border: 0; 
   padding: .75rem 1rem; 
@@ -113,23 +105,21 @@ body {
   display: inline-block;
 }
 
-/* Hover TP6 */
+/* Hover TP6, opacidad(opacity) y escala */
 .btn--primario:hover {
   opacity: 0.9;
   transform: scale(1.05);
   transition: 0.3s ease;
 }
 
-/* ================================
-   CATÁLOGO / PRODUCTOS
-================================ */
+/* parte de catálogo, PRODUCTO*/
 .destacados {
   max-width: var(--max);
   margin: 3rem auto;
   padding: 0 var(--gap);
 }
 
-.grid-productos {
+.grid-productos { /*grid general de producto*/
   display: grid;
   gap: 1.5rem;
   margin-top: 2rem;
@@ -149,14 +139,14 @@ body {
   }
 }
 
-.card {
+.card { /*tarjetas de producto*/
   background: #141416; 
   border-radius: 12px; 
   padding: 1rem;
   transition: 0.3s ease;
 }
 
-.card:hover {
+.card:hover { /*hover TP6, levanta la tarjeta*/
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
@@ -169,7 +159,7 @@ body {
   transition: transform 0.3s ease;
 }
 
-.card img:hover {
+.card img:hover { /*hover TP6, leve zoom en imagen*/
   transform: scale(1.03);
 }
 
@@ -183,9 +173,7 @@ body {
   font-size: 0.95rem;
 }
 
-/* ================================
-   CONTACTO
-================================ */
+/* Formulario de contacto e info*/
 .contacto-page {
   max-width: var(--max);
   margin: 2rem auto;
@@ -210,7 +198,7 @@ body {
   gap: 2rem;
 }
 
-.form {
+.form { /*recuadro formulario*/
   background: #141416;
   padding: 1.5rem;
   border-radius: 12px;
@@ -228,7 +216,7 @@ body {
   color: #fff;
 }
 
-.info-contacto {
+.info-contacto { /*recuadro info contacto*/
   background: #141416;
   padding: 1.5rem;
   border-radius: 12px;
@@ -239,9 +227,7 @@ body {
   text-decoration: none;
 }
 
-/* ================================
-   FOOTER
-================================ */
+/* parte footer*/
 footer {
   max-width: var(--max);
   margin: 3rem auto;
@@ -249,10 +235,8 @@ footer {
   color: var(--muted);
 }
 
-/* ================================
-   TP6 – CLASES DE EFECTOS Y ANIMACIONES
-================================ */
-.animar {
+/* TP6- clases de animacion y efectos*/
+.animar { /*anima elementos desde abajo*/
   animation: subir 0.6s ease forwards;
 }
 
@@ -261,10 +245,10 @@ footer {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-.oculto { opacity: 0; }
+.oculto { opacity: 0; } /*.oculto y .mostrar clases para mostrar u ocultar*/
 .mostrar { opacity: 1 !important; transition: opacity 0.5s ease; }
 
-.resaltar {
+.resaltar { /*.resaltar hace un efecto de brillo suave (botones, imagenes o avisos)*/
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
   transition: 0.5s ease;
 }
