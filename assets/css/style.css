@@ -303,3 +303,9 @@ footer {
     opacity: 1 !important;
     transition: opacity 0.5s ease;
 }
+
+/* .resaltar hace un efecto de brillo suave (botones, imagenes o avisos)*/
+.resaltar {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transition: box-shadow 0.5s ease;
+}
